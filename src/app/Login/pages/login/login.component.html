@@ -1,0 +1,68 @@
+<!-- begin login -->
+<div class="login-with-news-feed">
+  <!-- begin form -->
+  <div class="news-feed">
+    <div class="news-image swal-responsive">
+      <img src="/assets/img/login-bg/login_bg.png" class="img-fluid large-device">
+    </div>
+    <div class="content-w3ls swal-responsive">
+      <div class="content-bottom">
+        <form [formGroup]="credentialsForm" (ngSubmit)="login()" class="ng-dirty ng-touched ng-valid" autocomplete="off">
+          <div class="form-group">
+            <label>User Name</label>
+            <div class="wthree-field">
+              <input autocomplete="off" name="signonId" class="form-control m-input"
+              formControlName="signonId" type="text" placeholder="Enter User Name" required>
+            </div>
+          </div>
+          <div class="form-group margin_bottom_10px" *ngIf='!recoverPass'>
+            <label>Password</label>
+            <div class="wthree-field">
+              <input autocomplete="new-password" name="signonPassword" formControlName="signonPassword"
+                type="password" class="form-control passwordField" placeholder="Enter Password" required>
+            </div>
+          </div>
+          <div *ngIf='!recoverPass' class="checkbox checkbox-css margin-bottom-20px">
+            <!-- This will be use for later -->
+
+            <!-- <input type="checkbox" id="remember_me_checkbox" value="" />
+            <label for="remember_me_checkbox">
+              Remember Me
+            </label> -->
+            <a id="forgetPass" class="text-success" href="javascript:;" (click)="generateForgetPassword()"
+            i18n-matTooltip="Recover password tooltip|Click to Recover Password@@ClicktoRecoverPassword"
+            matTooltip="Click to Recover Password" style="color: #026ab9!important;"
+            i18n="Forgot Password link|Forgot Password@@forgotPassword">
+            Forgot Password?
+          </a>
+          </div>
+          <div>
+            <h5 align='center' style='color: rgb(216, 44, 44)'>{{loginErrorMessage}}</h5>
+            <h5 align='center' style='color: green'>{{passwordresetsuccess}}</h5>
+            <h5 align='center' style='color: rgb(216, 44, 44)'>{{passwordresetfailure}}</h5>
+          </div>
+
+          <div class="wthree-field">
+            <!-- log in button -->
+            <button *ngIf='!recoverPass' [disabled]="disableForm" type="submit" class="btn btn-primary btn-block btn-lg"
+              style="position: relative;">
+              {{loginText}}
+              <img src="/assets/img/action/arrowRight.png" class="arrow_right"/>
+            </button>
+            <button *ngIf='recoverPass' type="button" (click)='cancelRecoverPass()' class="btn btn-success  btn-lg"
+              style="margin-right :10px;">Cancel</button>
+            <!-- Recover button -->
+            <button *ngIf='recoverPass' type="submit"
+              class="btn btn-success btn-lg margin-bottom-20px pull-right">{{loginText}}</button>
+          </div>
+          <hr />
+          <p class="text-center text-grey-darker" style="margin-bottom: 0px;">
+            &copy; IMTAC LLC. All Right Reserved 2021
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- end form -->
+</div>
+<!-- end login -->

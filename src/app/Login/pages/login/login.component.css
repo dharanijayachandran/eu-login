@@ -1,0 +1,271 @@
+.main {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    position: relative;
+    min-height: 100vh;
+    background-position: bottom;
+}
+
+.background-Layer {
+    min-height: 100vh;
+    width: 100%;
+    position: fixed !important;
+    margin: 0;
+    left: 0;
+    top: 0;
+}
+
+.content-w3ls {
+    max-width: 325px;
+    /* margin: 3em auto; */
+    z-index: 9999;
+    /* position: absolute; */
+    right: 30px;
+    width: 325px;
+    border-radius: 8px;
+    box-shadow: 0 12px 39px 0 rgba(0, 0, 0, 0.48);
+    background-color: #ffffff;
+    position: relative;
+    /* top: 50%;
+    left: 78%;
+    transform: translate(-18%, -50%); */
+}
+
+.content-bottom {
+    padding: 30px;
+    /* margin: 0 1em; */
+    position: relative;
+    z-index: 1;
+    min-width: 325px;
+}
+
+.login-with-news-feed {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: calc(100vh - 100px);
+}
+
+.news-image {
+    position: fixed !important;
+}
+
+.checkbox.checkbox-css label:before {
+    background: grey;
+}
+
+.login.login-with-news-feed .login-header .brand {
+    color: #00acac;
+    font-weight: bold;
+}
+
+.checkbox.checkbox-css {
+    padding-top: 0px;
+    margin: 0 6px 10px;
+}
+
+.checkbox.checkbox-css input:checked+label:after,
+.checkbox.checkbox-css label:before {
+    top: 0px;
+}
+
+.passwordField {
+    padding: 24px 15px !important;
+}
+
+.login-with-news-feed .news-image {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Small device */
+@media screen and (min-device-width:320px) and (max-device-width:767px) {
+    .passwordField {
+        padding: 10px 15px !important;
+        margin-bottom: initial !important;
+        height: auto !important;
+    }
+
+    .swal-responsive{
+        position: static;
+        z-index: -1;
+    }
+
+    div.news-caption {
+        position: absolute !important;
+    }
+
+    .content-w3ls {
+        max-width: 100%;
+        width: 300px;
+        right: 0;
+        margin-bottom: 20px;
+    }
+
+    div#logInLogo {
+        display: block !important;
+    }
+
+    .login-with-news-feed {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+@media screen and (min-device-width:320px) and (max-device-width:767px) and (orientation:landscape) {
+    .content-w3ls {
+        right: 0px;
+    }
+
+    .login-with-news-feed {
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+    }
+
+    .swal-responsive{
+        position: static;
+        z-index: -1;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .large-device {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+/* Ipad device */
+@media screen and (min-device-width:768px) and (max-device-width:992px) {
+    .login-with-news-feed .news-caption .caption-title {
+        font-size: 30px !important;
+        padding-top: 50px;
+    }
+
+    .content-w3ls {
+        /* transform: translate(-50%, 50%);
+        top: 50%;
+        left: 50%; */
+        max-width: 325px;
+    }
+
+    .swal-responsive{
+        position: static;
+        z-index: -1;
+    }
+}
+
+@media screen and (min-device-width:768px) and (max-device-width:992px) and (orientation:landscape) {}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .swal-responsive{
+        position: static;
+        z-index: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .login.login-with-news-feed .news-feed {
+        display: block;
+    }
+
+    .swal-responsive{
+        position: static;
+        z-index: -1;
+    }
+}
+
+label {
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal !important;
+    letter-spacing: normal;
+    /* color: #506d85; */
+    color: #000000;
+    margin-bottom: 5px !important;
+}
+
+.form-control {
+    border-radius: 4px;
+    border: 1px solid #dbdbdb;
+    background-color: #f7f7f7;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    /* color: #506d85; */
+    color: #000000;
+    height: 30px !important;
+    padding: 6px !important;
+}
+
+[type="submit"].btn-primary {
+    border-radius: 4px;
+    background: #026ab9 !important;
+    padding: 7px 15px !important;
+    min-width: 90px;
+}
+
+div.form-group.margin_bottom_10px {
+    margin-bottom: 10px;
+}
+
+.login.login-with-news-feed .news-feed,
+.register.register-with-news-feed .news-feed {
+    right: 0;
+    transform: none;
+    overflow: auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.universe {
+    font-size: 32px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1d252d;
+}
+
+.login.login-with-news-feed .news-caption,
+.register.register-with-news-feed .news-caption {
+    background: none;
+}
+
+.login.login-with-news-feed .news-feed,
+.register.register-with-news-feed .news-feed {
+    position: initial;
+}
+
+.btn.btn-success {
+    border-radius: 4px;
+    background-color: #0091ff;
+    padding: 7px 15px;
+}
+
+.arrow_right {
+    position: absolute;
+    right: 30px;
+    bottom: 12px;
+    cursor: pointer;
+}
